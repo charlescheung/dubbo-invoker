@@ -8,7 +8,7 @@ import org.github.xhjcehust.dubbo.provider.model.Pojo;
  */
 public interface EchoService {
 
-    String echoString(String str);
+    String echoString(String str1,String str2);
 
     Pojo echoPojo(Pojo pojo);
 

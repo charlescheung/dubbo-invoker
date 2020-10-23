@@ -50,3 +50,21 @@ curl -H "Content-type: application/json" -X POST -d '
 * postman请求：
 
 ![](image/demo1.png)
+
+
+curl -H "Content-type: application/json" -X POST -d '
+{
+    "interfaceName": "org.github.xhjcehust.dubbo.provider.api.EchoService",
+    "methodName": "echoString",
+    "argTypes": [
+        "java.lang.String","java.lang.String"
+    ],
+    "argObjects": ["test2","test5"],
+    "version": "1.0",
+    "group": "test",
+    "attachments": {
+        "key": "value"
+    }
+}' http://127.0.0.1:8080/dubboInvoker/index
+返回：
+test2test5

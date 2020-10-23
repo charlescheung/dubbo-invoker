@@ -15,9 +15,9 @@ public class EchoServiceImpl implements EchoService {
     private static Logger logger = LoggerFactory.getLogger(EchoServiceImpl.class);
 
     @Override
-    public String echoString(String str) {
-        logger.info("str = {}, context = {}", str, RpcContext.getContext().getAttachments());
-        return str;
+    public String echoString(String str1,String str2) {
+        logger.info("str1 = {},str2 = {}, context = {}", str1,str2, RpcContext.getContext().getAttachments());
+        return str1+str2;
     }
 
     @Override
