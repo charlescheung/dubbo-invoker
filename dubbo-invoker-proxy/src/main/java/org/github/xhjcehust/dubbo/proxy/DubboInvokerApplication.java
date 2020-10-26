@@ -1,17 +1,17 @@
 package org.github.xhjcehust.dubbo.proxy;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author zhangyiting
  */
 //@ImportResource(value = {"classpath:applicationContext.xml"})
 @SpringBootApplication
-@MapperScan(basePackages = "org.github.xhjcehust.dubbo")
+@ComponentScan(basePackages = "org.github.xhjcehust.dubbo")
 public class DubboInvokerApplication extends SpringBootServletInitializer {
 
 	@Override
