@@ -81,6 +81,7 @@
 				<artifactId>slf4j-api</artifactId>
 				<version>${sl4j.version}</version>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
@@ -90,6 +91,12 @@
 			<groupId>org.apache.dubbo</groupId>
 			<artifactId>dubbo-spring-boot-starter</artifactId>
 			<version>2.7.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>${spring-boot.version}</version>
 		</dependency>
 
 		<dependency>
@@ -114,7 +121,20 @@
 					<groupId>org.slf4j</groupId>
 					<artifactId>slf4j-api</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
 			</exclusions>
+		</dependency>
+
+		<!-- 这个依赖让你能够在程序入口类：xxxAppAplication中直接执行main方法启动tomcat -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<version>${spring-boot.version}</version>
+			<!-- 但是这里一定要设置为provided -->
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -155,6 +175,14 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<repositories>

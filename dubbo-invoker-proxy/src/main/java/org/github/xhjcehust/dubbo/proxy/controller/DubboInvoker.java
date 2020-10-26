@@ -18,7 +18,7 @@ import java.util.Map;
  * @date 2019/7/26
  */
 @Controller
-@RequestMapping("/dubboInvoker")
+//@RequestMapping("/dubboInvoker")
 public class DubboInvoker {
 
     @Value("${dubbo.registry.address}")
@@ -46,7 +46,7 @@ public class DubboInvoker {
             "    }\n" +
             "}";
 
-    @RequestMapping("/index")
+    @RequestMapping("/invoke")
     @ResponseBody
     public Object index(@RequestBody(required = false) DubboInvokerParam param) {
         if (param == null) {
